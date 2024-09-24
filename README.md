@@ -18,4 +18,5 @@ As I'm still learning, I'm open to any suggestions, comments and recommendations
 
 
 
->[!NOTE] This project is licensed under the MIT License. (That's the usual, I guess)
+> [!NOTE]
+> This project is licensed under the MIT License. (That's the usual, I guess)
