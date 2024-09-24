@@ -1,16 +1,14 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
-import "./globals.css";
+import { Red_Hat_Display } from "next/font/google";
+import "@/styles/globals.css";
+import Nav from "@/components/navbar/nav";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
+import { config } from "@fortawesome/fontawesome-svg-core";
+import "@fortawesome/fontawesome-svg-core/styles.css";
+config.autoAddCss = false;
+
+const redHatDisplay = Red_Hat_Display({
+  subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
@@ -26,8 +24,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${redHatDisplay.className} antialiased pt-12 w-screen h-dvh`}
       >
+        <Nav />
         {children}
       </body>
     </html>
