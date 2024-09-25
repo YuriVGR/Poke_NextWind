@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Hanken_Grotesk } from "next/font/google";
+import { Inter } from "next/font/google";
 import "@/styles/globals.css";
 import Nav from "@/components/navbar";
 
@@ -7,7 +7,7 @@ import { config } from "@fortawesome/fontawesome-svg-core";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 config.autoAddCss = false;
 
-const hankenGrotesk = Hanken_Grotesk({
+const inter = Inter({
   subsets: ["latin"],
 });
 
@@ -24,7 +24,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${hankenGrotesk.className} flex h-screen w-screen flex-row overflow-hidden p-4 antialiased shadow-black/60 shadow-inner`}
+        className={`${inter.className} flex h-screen w-screen flex-row overflow-hidden p-4 antialiased shadow-inner shadow-black/60`}
       >
         <section className="flex h-full w-2/6 flex-col items-center overflow-hidden rounded-l-lg bg-red-500 p-12">
           <h1 className="text-center text-4xl font-bold text-white">

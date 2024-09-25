@@ -22,7 +22,7 @@ export default function CardModal({
         className={`group relative flex size-32 flex-col-reverse overflow-hidden rounded-lg bg-blue-300 bg-cover bg-center transition-all hover:shadow-xl hover:shadow-blue-300/40`}
         onClick={onOpenModal}
       >
-        <div className="z-10 flex h-0 w-full flex-col items-center justify-center overflow-clip bg-black/40 text-white transition-all hover:py-2 group-hover:h-1/3">
+        <div className="z-10 flex h-0 w-full flex-col items-center justify-center overflow-clip bg-black/40 text-white transition-all hover:py-3 group-hover:h-fit">
           <h1 className="text-lg font-bold">{name}</h1>
           <p className="text-sm">{type}</p>
         </div>
