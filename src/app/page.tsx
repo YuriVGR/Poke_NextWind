@@ -114,7 +114,7 @@ export default function Home() {
       </div>
       {selectedPokemon && (
         <Modal
-          name={selectedPokemon.name}
+          name={capitalize(selectedPokemon.name)}
           type={selectedPokemon.types.map((type) => type.type.name).join(", ")}
           characterPic={selectedPokemon.sprites.front_default}
           isOpen={!!selectedPokemon}
