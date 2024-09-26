@@ -10,27 +10,53 @@ import {
 export default function Nav() {
   const myLinks = [
     {
-      name: "Home",
-      href: "/",
-      icon: faHome,
+      name: "Pokemon",
+      href: "/pokemon",
     },
     {
-      name: "About",
-      href: "/about",
-      icon: faCircleQuestion,
+      name: "Berries",
+      href: "/berries",
+    },
+    {
+      name: "Home",
+      href: "/",
+    },
+    {
+      name: "Items",
+      href: "/items",
+    },
+    {
+      name: "Locations",
+      href: "/locations",
     },
   ];
 
   return (
-    <header className="absolute z-50 flex h-10 w-full justify-center">
-      <nav className="flex h-full w-full gap-4 px-4">
-        <div className="flex w-full justify-between gap-4 p-4">
-          {myLinks.map((link) => (
-            <Link href={link.href} key={link.name}>
-              <FontAwesomeIcon icon={link.icon} className="text-white hover:text-red-300 transition-all text-xl" />
+    <header className="absolute top-3 z-50 flex h-10 w-full justify-center">
+      <nav className="flex h-full flex-row items-center justify-center divide-x-2 rounded-lg bg-slate-300 px-4 text-black">
+        {myLinks.map((link) => {
+          if (link.name === "Home") {
+            return (
+              <Link
+                href={link.href}
+                key={link.name}
+                className="px-2 text-xl font-medium"
+              >
+                Home
+              </Link>
+            );
+          }
+
+          return (
+            <Link
+              href={link.href}
+              key={link.name}
+              className="px-2 text-xl font-medium"
+            >
+              {link.name}
             </Link>
-          ))}
-        </div>
+          );
+        })}
       </nav>
     </header>
   );
